@@ -1,7 +1,11 @@
 {% extends 'blog/base.html' %} {% block content %}
 <article class="post">
   <aside class="actions">
-    <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
+    <a
+      class="btn btn-secondary"
+      href="{% url 'post_edit' pk=post.pk %}"
+      class="mb-2"
+    >
       {% include './icons/pencil-fill.svg' %}
     </a>
   </aside>
