@@ -1,11 +1,11 @@
 {% extends 'blog/base.html' %} {% block content %} {% for post in posts %}
 <article class="post">
+  <time class="date mb-2"> {{ post.published_date }} </time>
   {%if post.imagen%}
-  <img src="{{post.imagen.url}}" alt="imagen Post" />
+  <img src="{{post.imagen.url}}" alt="imagen Post" class="img-fluid" />
   {% else %}
-  <img src="" alt="" />
+  <img src="" alt="" class="img-fluid" />
   {% endif %}
-  <time class="date"> {{ post.published_date }} </time>
   <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
   <p>{{ post.text|linebreaksbr }}</p>
 </article>

@@ -2,6 +2,7 @@ h1 a,
 h2 a {
   color: #f4771d;
   font-family: "Lobster";
+  width: 100%;
 }
 
 .page-header {
